@@ -1,0 +1,12 @@
+class Solution:
+    def countSeniors(self, details: List[str]) -> int:
+        res = 0
+
+        for i in details :
+            tens_place = ord(i[11]) - ord("0")
+            ones_place = ord(i[12]) - ord("0")
+            age = (tens_place*10) + ones_place
+
+            if age > 60 :
+                res+=1
+        return res
