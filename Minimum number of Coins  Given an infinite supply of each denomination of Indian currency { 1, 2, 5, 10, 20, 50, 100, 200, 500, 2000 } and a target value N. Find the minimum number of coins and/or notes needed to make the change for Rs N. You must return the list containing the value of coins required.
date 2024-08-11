@@ -1,0 +1,12 @@
+def minPartition(self, N):
+        denom = [1, 2, 5, 10, 20, 50, 100, 200, 500, 2000]
+        
+        n = len(denom)
+        i =n -1
+        a =[]
+        while i >= 0:
+            while N >= denom[i]:
+                N -=denom[i]
+                a.append(denom[i])
+            i -=1    
+        return a
